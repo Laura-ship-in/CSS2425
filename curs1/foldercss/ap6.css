@@ -1,0 +1,30 @@
+a:hover {
+     color: pink;
+font-size: 20px;
+}
+a:visited{
+    color: yellow;
+   font-size: 20px;
+}
+input:focus{
+    border: 20px solid red;
+    outline: none;
+}
+p:first-child{
+    color: seagreen;
+}
+p::before{
+    content: "Puppy";
+    color: rgba(255, 0, 0, 0.244);
+}
+body{
+    background-color: palegoldenrod;
+}
+::first-letter{
+    font-size: 100px;
+    color: pink;
+}
+::first-line{
+    font-size: 50px;
+    color: seagreen;
+}

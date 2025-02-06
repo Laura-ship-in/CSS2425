@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            color: green;
+
+        }
+        .demo{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="apasa"> Schimba culoarea</button>
+    <button id="apasa2">Schimba div</button>
+    <button id="apasa3">Schimba div</button>
+    <div id="para">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam error repellat ipsum iste explicabo quibusdam ratione perferendis sequi sit non?</p>
+        <p>Laudantium maxime impedit officiis architecto, cum animi aspernatur ad atque, ipsa minus consequuntur. Rerum consequuntur debitis molestias reprehenderit, quos corporis!</p>
+        <p>Harum veniam ex iure expedita aspernatur omnis, minima, iste blanditiis veritatis, neque excepturi facere nostrum hic consectetur voluptatem commodi aut.</p>
+        <p>Nam nisi consequatur repellat cumque, ratione officiis architecto sequi modi exercitationem facere vero ipsam quia dolorum! Officia quae eveniet iste?</p>
+        <p>Quos eaque voluptatem est, reprehenderit perspiciatis dignissimos quod dolores nulla accusamus. Voluptatem voluptatum eos autem provident numquam cum omnis blanditiis!</p>
+        <p>Ut blanditiis quisquam facere, officiis harum quasi sint debitis omnis nisi quas esse a provident adipisci ratione earum enim accusamus.</p>
+        <p>Incidunt ratione tempore, deleniti est quo blanditiis sunt sed debitis atque, amet iste architecto. Alias pariatur excepturi laudantium eveniet praesentium.</p>
+        <p>Facilis illum explicabo sint quaerat autem corrupti commodi nesciunt tempore similique, ipsam doloremque, assumenda atque doloribus earum mollitia debitis? Tempore.</p>
+        <p>Veritatis fugiat ipsa qui eaque, aliquid corrupti enim nisi mollitia provident. Accusamus totam provident eveniet molestias perferendis voluptate, nihil quas.</p>
+        <p>Architecto ea ullam vel distinctio autem iste eveniet in voluptates. Ipsam suscipit provident tempora amet cupiditate culpa nisi voluptas vero?</p>
+    </div>
+     <p class="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sapiente omnis voluptatum? Sint totam quae, placeat asperiores assumenda minus alias.</p>
+     <p class="demo">Maxime quibusdam accusamus dicta explicabo aspernatur vitae nemo. Nesciunt tempore a impedit laboriosam minima! Provident, fugit sapiente? Est, placeat animi.</p>
+     <p class="demo">Omnis unde dolorem illo tempore voluptatum. Atque harum, odio quam quod recusandae, cumque velit debitis voluptates veritatis eos alias non.</p>
+     <p class="demo">Blanditiis officiis sint tempore eveniet. Accusantium officia nesciunt error optio atque omnis natus alias est ea. Sint iusto quaerat tempore?</p>
+
+     <script>
+        let btn = document.getElementById('apasa');
+        let p =document.getElementsByTagName('p');
+        let btn2 = document.getElementById('apasa2');
+        let div = document.getElementById('para');
+        letparaDemo = document.getElementsByClassName('demo');
+        letparaDemo =  document.querySelectorAll('demo');
+        let myArr = [...paraDemo];
+        myArr.forEach(element => {
+            element.classList.add('demo2');
+        });
+        console.log('p :>>', p);
+// m-am jucat putin cu ele dar nu a  iesit ceea ce voiam eu sa fac
+        
+     </script>
+    <!-- <script>
+        let btn = document.getElementById('apasa');
+        let p =document.getElementsByTagName('p');
+        let btn2 = document.getElementById('apasa2');
+       let btn3 = document.getByElementId('apasa3');
+        let div = document.getElementById('para');
+        console.log('p :>>', p);
+        btn.addEventListener('click', function() {
+            btn.style.backgroundColor='red';
+            for(const element of p){
+                element.style.color='pink';
+                element.style.fontSize='20px;'
+                element.style.backgroundColor='yellow';
+            };
+           
+            // p.forEach(element => {
+            //     element.style.color='pink';
+            // });
+            // p.style.color='pink';
+         
+        });
+
+    //     btn2.addEventListener('click', function(){
+    //         let div = document.createElement('div');
+    //         div.style.cssText= div.style.width='100px';
+    //         div.style.height='100px';
+    //         // div.style.backgroundColor='blue';
+    //         // document.body.appendChild(div);
+    //     })
+    // </script> -->
+</body>
+</html>

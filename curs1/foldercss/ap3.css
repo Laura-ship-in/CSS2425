@@ -1,0 +1,9 @@
+div>p{
+    color: pink;
+}
+section>p{
+    color: brown;
+}
+div>h1 p{
+    color: salmon;
+}
