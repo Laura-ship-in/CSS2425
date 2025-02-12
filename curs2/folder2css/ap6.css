@@ -1,0 +1,43 @@
+div{
+
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    border: 15px double red;
+    float: left;
+}
+div:nth-of-type(2n){
+    background-color: yellow;
+    box-shadow: 10px 20px 15px 20px #888888;
+}
+#div1{
+    word-wrap: normal;
+}
+#div2{
+    word-wrap: break-word;
+}
+#div3{
+    writing-mode: vertical-lr;
+}
+#div4{
+    writing-mode: vertical-rl;
+}
+#div5{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+#div6{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container_aaa{
+    max-width: 1224px;
+    width: 100%;
+    margin: auto;
+    display: block; 
+    float: none;
+    height: 100vw;
+
+}
