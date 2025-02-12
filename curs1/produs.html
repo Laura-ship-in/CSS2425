@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./foldercss/product.css">
+    <style>
+        .product {
+            margin: 10px 0;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+       
+        <h1>
+            Pat TrendyNest 106 (Paros 01)
+        </h1>
+        <div class="produs">
+            <img id="produs" src="../curs1/poze/pat-trendynest-106-paros-01_3892370.webp" alt="Produs">
+        </div>
+    </header>
+    <section id="container">
+        <p>Pat TrendyNest 106 (Paros 01)-Mecanism de ridicare cu arc
+            Principiul mecanismului arcului se bazează pe arcuri care preiau o parte din sarcină și facilitează ridicarea patului. Arcurile facilitează procesul de ridicare, dar o parte din sarcină este lăsată și persoanei. Dacă este necesar să reduceți rezistența mecanismului, pentru aceasta este suficient să scoateți arcurile.
+        </p>
+        
+        <p>Dimensiuni: 160x200 cm</p>
+        <p>Culoare: Alb</p>
+        <p>Material: Lemn masiv</p>
+        <p>Preț: 5000 lei</p>
+        <p>Stoc: 10 buc</p>
+        <p>Transport gratuit</p>
+        <p>Garantie: 24 luni</p>
+        <p>Disponibilitate: In stoc</p>
+    </section>
+    <h2>Product Search and Filter</h2>
+    <input type="text" id="search" placeholder="Search for products...">
+    <select id="priceFilter">
+        <option value="all">All Prices</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+    <div id="productList">
+        <div class="product" data-price="10">Product 1 - $10</div>
+        <div class="product" data-price="20">Product 2 - $20</div>
+        <div class="product" data-price="30">Product 3 - $30</div>
+        <div class="product" data-price="40">Product 4 - $40</div>
+    </div>
+    
+    <script>
+        document.getElementById('search').addEventListener('input', function() {
+            const searchValue = this.value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const productName = product.textContent.toLowerCase();
+                if (productName.includes(searchValue)) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+        document.getElementById('priceFilter').addEventListener('change', function() {
+            const filterValue = this.value;
+            const products = Array.from(document.querySelectorAll('.product'));
+            let sortedProducts;
+
+            if (filterValue === 'low') {
+                sortedProducts = products.sort((a, b) => a.dataset.price - b.dataset.price);
+            } else if (filterValue === 'high') {
+                sortedProducts = products.sort((a, b) => b.dataset.price - a.dataset.price);
+            } else {
+                sortedProducts = products;
+            }
+
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+            sortedProducts.forEach(product => productList.appendChild(product));
+        });
+    </script>
+    
+</body>
+</html>
