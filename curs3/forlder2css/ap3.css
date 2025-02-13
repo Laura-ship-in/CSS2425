@@ -1,0 +1,16 @@
+html, body{
+    width: 100%;
+
+    font-size: 18px;
+}
+#p1{
+    font-size: 2rem;
+    color: rgb(201, 249, 11);
+}
+div{
+    font-size: 21px;
+}
+#p2{
+    font-size: 2rem;
+    color: rgb(197, 98, 177);
+}
