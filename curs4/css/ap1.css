@@ -1,0 +1,20 @@
+.grad{
+    background-image: linear-gradient(to right, rgb(186, 29, 29), rgb(48, 201, 228), rgb(231, 41, 224));
+    width: 100%;
+    height: 100px;
+}
+.grad:after{
+    content: attr(data-info);
+    font-size: 25px;
+}
+.calc{
+width: calc(100% - 300px);
+font-size:  25px;
+}
+.calc{
+    width: calc(100% - 300px);
+    background-image: linear-gradient(to right, rgb(185, 14, 14), rgb(166, 61, 219), rgb(203, 32, 149));
+    height: 100px;
+
+margin: 20px auto;
+}
