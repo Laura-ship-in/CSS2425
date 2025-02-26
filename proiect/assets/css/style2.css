@@ -2,7 +2,7 @@
 # General
 --------------------------------------------------------------*/
 :root{
-  --mycolor:#9210ea;;
+  --mycolor: rgba(195, 88, 7, 0.813);;
   --mybackground: rgba(16, 110, 234, 0.8);;
 }
 body {
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 70px;
 }
 #header .logo {
-  font-size: 30px;
+  font-size: 5px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -169,12 +169,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header .logo a {
   color: #222222;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+
 }
 #header .logo a span {
   color: var(--mycolor);
 }
 #header .logo img {
-  max-height: 160px;
+  max-height: 80px;
+  width: 180%;
 }
 
 .scrolled-offset {
@@ -394,13 +401,13 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 75vh;
-  background: url("../img/hero-bg.jpg") top left;
+  background: url("../img/coperta.jpeg") top left;
   background-size: cover;
   position: relative;
 }
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.372);
   position: absolute;
   bottom: 0;
   top: 0;
