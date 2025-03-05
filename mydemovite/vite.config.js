@@ -21,11 +21,10 @@ const sec7 = ejs.render(fs.readFileSync("./src/templates/sectiunea7.html", "utf8
 const footer = ejs.render(fs.readFileSync("./src/templates/footer.html", "utf8"));
 
 export default defineConfig({
-    base: "./",
     plugins: [
         createHtmlPlugin({
             minify: false, // Minimizează HTML
-            template: './src/index.html?row',
+            template: './index.html',
             inject: {
                 data: {
                     head: head,
@@ -35,8 +34,8 @@ export default defineConfig({
                     sec1: sec1,
                     sec2: sec2,
                     sec3: sec3,
-                    sec4: sec4,
                     sec5: sec5,
+                    sec4: sec4,
                     sec6: sec6,
                     sec7: sec7,
                     footer: footer,
@@ -44,7 +43,7 @@ export default defineConfig({
                 tags: [
                     {
                         tag: 'script',
-                        attrs: { type: 'module', src: '/assets/js/main.js' },
+                        attrs: { type: 'module', src: '/src/assets/js/main.js' },
                         injectTo: 'body' // Injectează la sfârșitul <body>
                     }
                 ],
@@ -53,7 +52,7 @@ export default defineConfig({
         viteStaticCopy({
             targets: [
                 {
-                    src: 'assets/', // Folderul sursă
+                    src: './src/assets/', // Folderul sursă
                     dest: '' // Copiază direct în /dist/
                 }
             ]
@@ -68,7 +67,7 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                additionalData: `@import "./src/scss/style.scss";`,
+                additionalData: `@import "./src/assets/scss/style.scss";`,
             },
         },
     },
@@ -77,7 +76,7 @@ export default defineConfig({
         rollupOptions: {
             preserveEntrySignatures: 'strict', // Păstrează fiecare fișier separat
             input: {
-                main: './src/index.html', // Se asigură că Vite include toate fișierele din HTML
+                main: 'index.html', // Se asigură că Vite include toate fișierele din HTML
             },
             output: {
                 // assetFileNames: "assets/css/[name]-[hash][extname]", // Optimizare CSS/JS
